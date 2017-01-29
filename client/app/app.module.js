@@ -10,7 +10,12 @@
 		$stateProvider
 			.state('home', {
 			url: '/home',
-			templateUrl: 'app/home/home.html'
+			views: {
+				'': {templateUrl: 'app/home/home.html'},
+				'header@home': {templateUrl: 'app/header/header.html'},
+				'content@home': {templateUrl: 'app/main-content/main-content.html'},
+				'footer@home': {templateUrl: 'app/footer/footer.html'}
+			}
 		});
 
 		$urlRouterProvider.when('', '/home');

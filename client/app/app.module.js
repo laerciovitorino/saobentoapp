@@ -8,12 +8,12 @@
 
 	function stateConfig($stateProvider, $urlRouterProvider) {
 		$stateProvider
-			.state('app', {
-			url: '/landing',
-			templateUrl: 'app/landing/landing.html'
+			.state('home', {
+			url: '/home',
+			templateUrl: 'app/home/home.html'
 		});
 
-		$urlRouterProvider.when('', '/landing');
+		$urlRouterProvider.when('', '/home');
 		$urlRouterProvider.otherwise('/page-not-found');
 	}
 })();
